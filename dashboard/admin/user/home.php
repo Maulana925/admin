@@ -14,13 +14,16 @@ $users = mysqli_query($koneksidb, "SELECT * FROM users");
             </tr>
         </thead>
         <tbody>
-            <?php while ($row = mysql_fetch_assoc($user)): ?>
+            <?php while ($row = mysqli_fetch_assoc($users)): ?>
             <tr>
                 <td><?=$row['id'] ?></td>
                 <td><?=htmlspecialchars($row['username'])?></td>
                 <td><?=$row['role'] ?></td>
                 <td>
-                    <a href="edit.php?id=<? $row['id'] ?>"
+                    <a href="edit.php?id=<?= $row['id']?>"
+                    class="btn btn-sm btn-warning">Edit</a> 
+
+                    <a href="#" class="btn btm-sm btn-danger"
                     onclick="confrimDelete(<?=$row['id'] ?>)">Hapus</a>
                 </td>
             </tr>

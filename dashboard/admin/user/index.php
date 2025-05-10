@@ -9,7 +9,7 @@ $breadcrumbs = [
     ['title' => 'Home','link' => base_url('dashboard/admin')],
     ['title' => 'User Management']
 ];
-$content = base_path('dashboard/admin/home.php');
+$content = base_path('dashboard/admin/user/home.php');
 include base_path('layout/main.php');
 ?>
 
