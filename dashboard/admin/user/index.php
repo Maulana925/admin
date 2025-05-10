@@ -1,6 +1,6 @@
 <?php
-include '../../config/config.php';
-include '../../config/config.php';
+include '../../../config/config.php';
+include '../../../config/koneksi.php';
 session_start();
 cek_admin();
 
